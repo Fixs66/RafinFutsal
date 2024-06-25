@@ -49,9 +49,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-9 d-none d-lg-block">
-            <a href="<?= base_url('kontak') ?>" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Ada Pertanyaan?</a> 
-            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 081574680523</a> 
-            <a class="small mr-3"><span class="icon-envelope-o mr-2"></span> RAFIN2024@gmail.com</a> 
+            <a href="<?= base_url('kontak') ?>" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Ada Pertanyaan?</a>
+            <a class="small mr-3"><span class="icon-phone2 mr-2"></span> 081574680523</a>
+            <a class="small mr-3"><span class="icon-envelope-o mr-2"></span> RAFIN2024@gmail.com</a>
           </div>
         </div>
       </div>
@@ -71,53 +71,46 @@
                 <li class="active">
                   <a href="<?= base_url('welcome') ?>" class="nav-link text-left">Home</a>
                 </li>
-
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Pusat Informasi
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?= base_url('data_bookingan') ?>">Info Booking</a>
-                    <a class="dropdown-item" href="<?= base_url('data_lapang') ?>">Info Lapangan</a>
-                  </div>
+                <li>
+                <a href="<?= base_url('data_lapang') ?>" class="nav-link text-left">Info Lapangan</a>
                 </li>
-   
                 <li>
                   <a href="<?= base_url('pemesanan') ?>" class="nav-link text-left">Booking</a>
                 </li>
                 <li>
-
-                  <li>
-                  <a href="<?= base_url('guide') ?>" class="nav-link text-left">Cara Pesan</a>
-                </li>
+                  <a href="<?= base_url('data_bookingan_member') ?>" class="nav-link text-left">Info Booking</a>
                 <li>
-                  <a href="<?= base_url('kontak') ?>" class="nav-link text-left">Kontak</a>
-                </li>
+                <li>
+                  <a href="<?= base_url('guide') ?>" class="nav-link text-left">Cara Pesan</a>
                 <li>
                   <div class="topbar-divider d-none d-sm-block"></div>
-                <ul class="na navbar-nav navbar-right">
-                 <?php if($this->session->userdata('username')) { ?>
-                   <li><div></div><div>
-                 <?php echo anchor('auth/logout','Logout') ?></li></div></li>
-              <?php } else { ?>
-                   <li><?php echo anchor('auth/login','Login'); ?></li>
+                  <ul class="na navbar-nav navbar-right">
+                    <?php if ($this->session->userdata('username')) { ?>
+                      <li>
+                        <div></div>
+                        <div>
+                          <?php echo anchor('auth/logout', 'Logout') ?>
+                      </li>
+          </div>
+          </li>
+        <?php } else { ?>
+          <li><?php echo anchor('auth/login', 'Login'); ?></li>
 
-              <?php } ?> 
+        <?php } ?>
 
-            </ul>
+        </ul>
 
-          </ul>
+        </ul>
 
         </nav>
-                  </li>
-              </ul>                                                                                                                                                                                                                                                                                          </ul>
-            </nav>
+        </li>
+        </ul>
+        </ul>
+        </nav>
 
-          </div>
-         
         </div>
+
       </div>
+  </div>
 
-    </header>
-
-    
+  </header>
